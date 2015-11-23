@@ -13,7 +13,7 @@ PSRs you support to avoid any confusion with users and contributors.
 To install util as a Composer package run:
 
 ``` bash
-$ composer require darktec/utl
+$ composer require darktec/util
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/darktec/util.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-license]: https://img.shields.io/packagist/l/darktec/util.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/darktec/util/master.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/darktec/util.svg?style=flat-square
 
