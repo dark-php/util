@@ -1,5 +1,5 @@
 <?php
-namespace Darktec\Util\Tests;
+namespace Darktec\Tests;
 
 use Darktec\Util\Collection;
 
