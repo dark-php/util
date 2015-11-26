@@ -3,13 +3,14 @@
 All Notable changes to `darktec\util` will be documented in this file
 
 ### Added
-- Nothing
+- Collection [A <int,object> pair]
+- Map [A <string,object> pair]
 
 ### Deprecated
 - Nothing
 
 ### Fixed
-- Nothing
+- Collection
 
 ### Removed
 - ANothing
