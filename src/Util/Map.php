@@ -15,7 +15,7 @@ abstract class Map
      * @param mixed
      * @return void
      */
-    public function add(\string $key, $value)
+    public function add(string $key, $value)
     {
         $this->items[$key] = $value;
     }
@@ -27,7 +27,7 @@ abstract class Map
      * @return object
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function get(\string $index)
+    public function get(string $index)
     {
         if (isset($this->items[$index])) {
             return $this->items[$index];
@@ -43,7 +43,7 @@ abstract class Map
      * @return void
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function delete(\string $index)
+    public function delete(string $index)
     {
         if (isset($this->items[$index])) {
             unset($this->items[$index]);
@@ -68,7 +68,7 @@ abstract class Map
      * @param string
      * @return bool
      */
-    public function keyExists(\string $index): bool
+    public function keyExists(string $index): bool
     {
         return isset($this->items[$index]);
     }

@@ -25,7 +25,7 @@ abstract class Collection
      * @return mixed
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function get(\int $index)
+    public function get(int $index)
     {
         if (isset($this->items[$index])) {
             return $this->items[$index];
@@ -41,7 +41,7 @@ abstract class Collection
      * @return void
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function delete(\int $index)
+    public function delete(int $index)
     {
         if (isset($this->items[$index])) {
             unset($this->items[$index]);
@@ -66,7 +66,7 @@ abstract class Collection
      * @param int
      * @return bool
      */
-    public function keyExists(\int $index): bool
+    public function keyExists(int $index): bool
     {
         return isset($this->items[$index]);
     }
