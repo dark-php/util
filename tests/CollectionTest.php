@@ -28,7 +28,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
      * @depends testCreateCollection
      */
     public function testLength(Collection $collection) {
-        $this->assertEquals($collection->length(), 3);
+        $this->assertEquals(3, $collection->length());
     }
 
     /**
@@ -36,7 +36,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
      */
     public function testAddItem(Collection $collection) {
         $collection->add('Item 4');
-        $this->assertEquals($collection->length(), 4);
+        $this->assertEquals(4, $collection->length());
 
         return $collection;
     }
@@ -46,7 +46,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
      */
     public function testDeleteItem(Collection $collection) {
         $collection->delete(3);
-        $this->assertEquals($collection->length(), 3);
+        $this->assertEquals(3, $collection->length());
     }
 
     /**

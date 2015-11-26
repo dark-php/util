@@ -3,29 +3,31 @@ namespace Darktec\Util;
 
 use Darktec\Error\InvalidKeyException;
 
-abstract class Collection
+abstract class Map
 {
+
     protected $items;
 
     /**
-     * Add an object to the collection
+     * Add an object to the map
      *
+     * @param string
      * @param mixed
      * @return void
      */
-    public function add($item)
+    public function add(\string $key, $value)
     {
-        $this->items[] = $item;
+        $this->items[$key] = $value;
     }
 
     /**
-     * Get an object from the collection
+     * Get an object from the map
      *
-     * @param int
-     * @return mixed
+     * @param string
+     * @return object
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function get(\int $index)
+    public function get(\string $index)
     {
         if (isset($this->items[$index])) {
             return $this->items[$index];
@@ -35,13 +37,13 @@ abstract class Collection
     }
 
     /**
-     * Removes an object from the collection
+     * Removes an object from the map
      *
-     * @param int
+     * @param string
      * @return void
      * @throws \Darktec\Error\InvalidKeyException
      */
-    public function delete(\int $index)
+    public function delete(\string $index)
     {
         if (isset($this->items[$index])) {
             unset($this->items[$index]);
@@ -51,9 +53,9 @@ abstract class Collection
     }
 
     /**
-     * Returns the collections keys
+     * Returns the map keys
      *
-     * @return int[]
+     * @return string[]
      */
     public function keys(): array
     {
@@ -63,16 +65,16 @@ abstract class Collection
     /**
      * Checks whether a given key exists
      *
-     * @param int
+     * @param string
      * @return bool
      */
-    public function keyExists(\int $index): bool
+    public function keyExists(\string $index): bool
     {
         return isset($this->items[$index]);
     }
 
     /**
-     * Check whether the collection contains an object
+     * Check whether the map contains an object
      * @param mixed
      * @return bool
      */
@@ -82,7 +84,7 @@ abstract class Collection
     }
 
     /**
-     * Returns length of the collection
+     * Returns length of the map
      *
      * @return int
      */
