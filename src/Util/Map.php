@@ -3,6 +3,16 @@ namespace Darktec\Util;
 
 use Darktec\Error\InvalidKeyException;
 
+/**
+ * Darktec Util: Map
+ *
+ * This class is an array wrapper that allows you to have string indexes and provides common functions
+ * for collection objects
+ *
+ * @author David Hopson <mantle@hotmail.co.uk>
+ * @version 1.0
+ * @package Darktec\Util
+ */
 abstract class Map
 {
 

@@ -3,9 +3,28 @@ namespace Darktec\Util;
 
 use Darktec\Error\InvalidKeyException;
 
+/**
+ * Darktec Util: Collection
+ *
+ * This class is an array wrapper that allows you to have integer indexes and provides common functions
+ * for collection objects
+ *
+ * @author David Hopson <mantle@hotmail.co.uk>
+ * @version 1.0
+ * @package Darktec\Util
+ */
 abstract class Collection
 {
-    protected $items;
+    public $items;
+
+    /**
+     * Collection constructor creates a collection using given array.
+     * @param $items
+     */
+    public function __construct($items)
+    {
+        $this->items = $items;
+    }
 
     /**
      * Add an object to the collection
