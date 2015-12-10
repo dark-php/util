@@ -1,0 +1,114 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Darktec Util's is a collection of Utility classes for PHP 7\n\n\n\n\n\n\n\n\n\n\nInstallation\n\n\nTo install Darktec Util's as a Composer package run:\n\n\n$ composer require darktec/util", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#installation", 
+            "text": "To install Darktec Util's as a Composer package run:  $ composer require darktec/util", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/user-guide/collection/", 
+            "text": "A Collection is a PHP array wrapped with common functions, that requires an \ninteger\n index. These functions provide \nmore secure access to an array object by enforcing index types. For string indexes see \nMap\n.\n\n\nExtending Collection\n\n\nTo use Collection you must create your own class that extends it. Actions are then applied directly to your created \nclass, for example:\n\n\nclass MyCollection extends Collection {\n}\n\n\n\n\nCollection contains a constructor that takes an array and sets it to $items but this can be overriden to give you \nthe freedom to set the items however you want.\n\n\nCreate\n\n\n$items = array('Item 1', 'Item 2', 'Item 3');\n\n// Create collection from array\n$collection = new MyCollection($items);\n\n\n\n\nGet\n\n\nReturns the item at given index\n\n\n$item = $collection-\nget(0);\n\n\n\n\nLength\n\n\nReturns the number of items in collection\n\n\n$length = $collection-\nlength();\n\n\n\n\nAdd\n\n\nAdds given item to collection\n\n\n$collection-\nadd('Item 4');\n\n\n\n\nDelete\n\n\nDeletes item at given index\n\n\n$collection-\ndelete(3);\n\n\n\n\nContains\n\n\nReturns true if item is in collection\n\n\n$inCollection = $collection-\ncontains('Item 1')\n\n\n\n\nKeys\n\n\nReturns an array of keys in collection\n\n\n$keys = $collection-\nkeys();\n\n\n\n\nKey Exists\n\n\nReturns true if given index exists\n\n\n$keyExists = $collection-\nkeyExists(0);", 
+            "title": "Collection"
+        }, 
+        {
+            "location": "/user-guide/collection/#extending-collection", 
+            "text": "To use Collection you must create your own class that extends it. Actions are then applied directly to your created \nclass, for example:  class MyCollection extends Collection {\n}  Collection contains a constructor that takes an array and sets it to $items but this can be overriden to give you \nthe freedom to set the items however you want.", 
+            "title": "Extending Collection"
+        }, 
+        {
+            "location": "/user-guide/collection/#create", 
+            "text": "$items = array('Item 1', 'Item 2', 'Item 3');\n\n// Create collection from array\n$collection = new MyCollection($items);", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/user-guide/collection/#get", 
+            "text": "Returns the item at given index  $item = $collection- get(0);", 
+            "title": "Get"
+        }, 
+        {
+            "location": "/user-guide/collection/#length", 
+            "text": "Returns the number of items in collection  $length = $collection- length();", 
+            "title": "Length"
+        }, 
+        {
+            "location": "/user-guide/collection/#add", 
+            "text": "Adds given item to collection  $collection- add('Item 4');", 
+            "title": "Add"
+        }, 
+        {
+            "location": "/user-guide/collection/#delete", 
+            "text": "Deletes item at given index  $collection- delete(3);", 
+            "title": "Delete"
+        }, 
+        {
+            "location": "/user-guide/collection/#contains", 
+            "text": "Returns true if item is in collection  $inCollection = $collection- contains('Item 1')", 
+            "title": "Contains"
+        }, 
+        {
+            "location": "/user-guide/collection/#keys", 
+            "text": "Returns an array of keys in collection  $keys = $collection- keys();", 
+            "title": "Keys"
+        }, 
+        {
+            "location": "/user-guide/collection/#key-exists", 
+            "text": "Returns true if given index exists  $keyExists = $collection- keyExists(0);", 
+            "title": "Key Exists"
+        }, 
+        {
+            "location": "/user-guide/map/", 
+            "text": "A Map is a PHP array wrapped with common functions, that requires a \nstring\n index. These functions provide \nmore secure access to an array object by enforcing index types. For string indexes see \nCollection\n.\n\n\nExtending Map\n\n\nTo use Map you must create your own class that extends it. Actions are then applied directly to your created \nclass, for example:\n\n\nclass MyMap extends Map {\n}\n\n\n\n\nMap contains a constructor that takes an array and sets it to $items but this can be overriden to give you \nthe freedom to set the items however you want.\n\n\nCreate\n\n\n$items = array('Item 1', 'Item 2', 'Item 3');\n\n// Create map from array\n$map = new MyMap($items);\n\n\n\n\nGet\n\n\nReturns the item at given index\n\n\n$item = $map-\nget(0);\n\n\n\n\nLength\n\n\nReturns the number of items in map\n\n\n$length = $map-\nlength();\n\n\n\n\nAdd\n\n\nAdds given item to map\n\n\n$map-\nadd('Item 4');\n\n\n\n\nDelete\n\n\nDeletes item at given index\n\n\n$map-\ndelete(3);\n\n\n\n\nContains\n\n\nReturns true if item is in map\n\n\n$inMap = $map-\ncontains('Item 1')\n\n\n\n\nKeys\n\n\nReturns an array of keys in map\n\n\n$keys = $map-\nkeys();\n\n\n\n\nKey Exists\n\n\nReturns true if given index exists\n\n\n$keyExists = $map-\nkeyExists(0);", 
+            "title": "Map"
+        }, 
+        {
+            "location": "/user-guide/map/#extending-map", 
+            "text": "To use Map you must create your own class that extends it. Actions are then applied directly to your created \nclass, for example:  class MyMap extends Map {\n}  Map contains a constructor that takes an array and sets it to $items but this can be overriden to give you \nthe freedom to set the items however you want.", 
+            "title": "Extending Map"
+        }, 
+        {
+            "location": "/user-guide/map/#create", 
+            "text": "$items = array('Item 1', 'Item 2', 'Item 3');\n\n// Create map from array\n$map = new MyMap($items);", 
+            "title": "Create"
+        }, 
+        {
+            "location": "/user-guide/map/#get", 
+            "text": "Returns the item at given index  $item = $map- get(0);", 
+            "title": "Get"
+        }, 
+        {
+            "location": "/user-guide/map/#length", 
+            "text": "Returns the number of items in map  $length = $map- length();", 
+            "title": "Length"
+        }, 
+        {
+            "location": "/user-guide/map/#add", 
+            "text": "Adds given item to map  $map- add('Item 4');", 
+            "title": "Add"
+        }, 
+        {
+            "location": "/user-guide/map/#delete", 
+            "text": "Deletes item at given index  $map- delete(3);", 
+            "title": "Delete"
+        }, 
+        {
+            "location": "/user-guide/map/#contains", 
+            "text": "Returns true if item is in map  $inMap = $map- contains('Item 1')", 
+            "title": "Contains"
+        }, 
+        {
+            "location": "/user-guide/map/#keys", 
+            "text": "Returns an array of keys in map  $keys = $map- keys();", 
+            "title": "Keys"
+        }, 
+        {
+            "location": "/user-guide/map/#key-exists", 
+            "text": "Returns true if given index exists  $keyExists = $map- keyExists(0);", 
+            "title": "Key Exists"
+        }
+    ]
+}
