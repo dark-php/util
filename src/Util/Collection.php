@@ -8,7 +8,6 @@ use IteratorAggregate;
 use ArrayIterator;
 use Darktec\Error\InvalidKeyException;
 
-
 /**
  * Darktec Util: Collection
  *
