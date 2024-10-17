@@ -92,7 +92,7 @@ abstract class Collection implements Arrayable, ArrayAccess, Countable, Iterator
      * @return bool
      */
     public function contains($index): bool {
-        return in_array($index, $this->items);
+        return array_key_exists($index, $this->items);
     }
 
     /**
@@ -143,7 +143,7 @@ abstract class Collection implements Arrayable, ArrayAccess, Countable, Iterator
     public function jsonSerialize()
     {
         return array_map(function ($item) {
-            return $item instanceof JsonSerializable ? $item->jsonSerialize() : $item instanceof Arrayable ? $item->toArray() : $item;
+            return $item instanceof JsonSerializable ? $item->jsonSerialize() : ($item instanceof Arrayable ? $item->toArray() : $item);
         }, $this->items);
     }
 

@@ -1,9 +1,16 @@
 <?php
 namespace Darktec\Tests;
 
+use Darktec\Error\InvalidKeyException;
 use Darktec\Util\Collection;
+use PHPUnit\Framework\TestCase;
 
-class CollectionTest extends \PHPUnit_Framework_TestCase
+class TestCollection extends Collection
+{
+    public $items;
+}
+
+class CollectionTest extends TestCase
 {
 
     public function testCreateCollection()
@@ -59,7 +66,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testContains(Collection $collection)
     {
-        $this->assertTrue($collection->contains('Value 1'));
+        $this->assertTrue($collection->contains('Key 1'));
     }
 
     /**
@@ -100,6 +107,8 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
     public function testUpdateCollection(Collection $collection)
     {
         $collection->add('Key 4', array('sub1', 'sub2'));
+        
+        $this->assertTrue($collection->contains('Key 4'));
         return $collection;
     }
 
@@ -128,6 +137,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidKeyException(Collection $collection)
     {
+        $this->expectException(InvalidKeyException::class);
         $collection->get("10");
     }
 }
