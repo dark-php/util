@@ -17,7 +17,10 @@
     }
   ],
   "require": {
-    "php": ">=8"
+    "php": ">=8",
+    "lexdubyna/blade": "^1.5",
+    "aura/sqlquery": "^3.0",
+    "php-di/php-di": "^7.0"
   },
   "require-dev": {
     "phpunit/phpunit": "10.0.*"
